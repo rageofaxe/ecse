@@ -16,25 +16,32 @@ function Try(): JSX.Element {
       });
   }, [name]);
   return (
-    <>
+    <div className="card ">
       <h3>Enter the name and create your shop</h3>
-      <div className="row">
-        <div className="col">
-          <input
-            className=""
-            width={4}
-            defaultValue={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div className="col">
+      <div>
+        <input
+          className=""
+          width={4}
+          defaultValue={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <br />
+        <code>ecse.io/{name}</code>
+        <br />
+        <br />
+        <div>
+          <button
+            className="button primary outline"
+            onClick={() => alert('yep')}
+          >
+            Check
+          </button>
           <button className="button primary" onClick={create}>
             Create
           </button>
         </div>
       </div>
-      <code>ecse.io/{name}</code>
-    </>
+    </div>
   );
 }
 

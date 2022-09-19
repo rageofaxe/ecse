@@ -1,0 +1,58 @@
+* {
+  color: var(--font-color);
+}
+
+:root {
+  --bg-color: #ffffff;
+  --bg-secondary-color: #f3f3f6;
+  --color-primary: #00b85f;
+  --color-lightGrey: #ffffe9;
+  --color-grey: #c5c9a4;
+  --color-darkGrey: #555;
+  --color-error: #ff2424;
+  --color-success: #28bd14;
+  --grid-maxWidth: 120rem;
+  --grid-gutter: 2rem;
+  --font-size: 1.6rem;
+  --font-color: #333333;
+  --font-family-sans: sans-serif;
+  --font-family-mono: monaco, 'Consolas', 'Lucida Console', monospace;
+}
+
+.is-transparent {
+  background: transparent;
+}
+
+.button {
+  border-radius: 0;
+}
+
+.card {
+  border-radius: 0;
+  border: 2px solid var(--color-darkGrey);
+  border-left: 2px solid var(--color-darkGrey);
+  box-shadow: 20px 20px 0px 2px var(--color-darkGrey);
+  -webkit-box-shadow: 20px 20px 0px 2px var(--color-darkGrey);
+  -moz-box-shadow: 20px 20px 0px 2px var(--color-darkGrey);
+}
+
+input,
+textarea {
+  border: 2px solid var(--color-grey) !important;
+  border-radius: 0 !important;
+}
+
+.card footer {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 2px solid var(--color-darkGrey);
+}
+
+.card footer * {
+  margin-left: 16px;
+}
+
+main .card.is-transparent {
+  transform: translateY(0px);
+  padding: 32px;
+}
