@@ -1,0 +1,13 @@
+.App {
+  background-color: aqua;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: red;
+  padding: 32px;
+}
+
+main {
+  padding: 32px;
+}
