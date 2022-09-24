@@ -113,6 +113,6 @@ h4,
 h5,
 h6 {
   color: var(--color-darkGrey);
-  /* font-weight: 600; */
-  font-family: 'Pixel square';
+  font-weight: 600;
+  /* font-family: 'Pixel square'; */
 }
