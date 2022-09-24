@@ -1,0 +1,30 @@
+.header {
+  padding: 32px;
+  background-color: rgb(255 255 220);
+  z-index: 1;
+  border-bottom: 2px solid var(--color-darkGrey);
+  margin-left: 0; /* override chota's row */
+}
+
+.header-place {
+  height: 120px;
+}
+
+.menu a {
+  margin-left: 32px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.logo a {
+  font-weight: 600;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo a span {
+  margin-left: 4px;
+  margin-bottom: 4px;
+}

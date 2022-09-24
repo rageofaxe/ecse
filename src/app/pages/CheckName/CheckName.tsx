@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+
 import { routes } from '../../consts';
 import classes from './CheckName.module.css';
 import image from '../../image.svg';

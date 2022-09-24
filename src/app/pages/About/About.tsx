@@ -7,22 +7,15 @@ function About(): JSX.Element {
     <main>
       <div className="card is-transparent">
         <header>
-          <h1>What is going on?</h1>
+          <h1>About</h1>
         </header>
 
-        <h3>First of all</h3>
-        <p>Bla bla bla</p>
-        <h3>The second reason</h3>
-        <p>Bla bla bla</p>
-        <h3>and last one</h3>
-        <p>Bla bla bla</p>
-
-        <h3>First of all</h3>
-        <p>Bla bla bla</p>
-        <h3>The second reason</h3>
-        <p>Bla bla bla</p>
-        <h3>and last one</h3>
-        <p>Bla bla bla</p>
+        <div className="row">
+          <div className="col-6">
+            <p>Coming soon</p>
+          </div>
+          <div className="col-6"></div>
+        </div>
 
         <div className="is-right">
           <Link to={routes.getStarted} className="button primary">

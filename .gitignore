@@ -6,3 +6,5 @@ dist
 dist-ssr
 *.local
 .eslintcache
+grant.md
+src/nft

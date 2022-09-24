@@ -1,4 +1,5 @@
 import express from 'express';
+// import subdomain from 'express-subdomain';
 import router from './lib/router';
 import path from 'path';
 
@@ -11,6 +12,7 @@ app.use(express.json());
 
 // Serve API requests from the router
 app.use('/api', router);
+// app.use(subdomain('qwe', router));
 
 // Serve storybook production bundle
 app.use('/storybook', express.static('dist/storybook'));

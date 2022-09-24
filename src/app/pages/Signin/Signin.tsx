@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 function Signin(): JSX.Element {
   return (
     <main className="is-center">
-      <div className="card">
+      <div className="card page">
         <header>
-          <h3>Sign in</h3>
+          <h1>Sign in</h1>
         </header>
 
         <input placeholder="Email" type="email" />

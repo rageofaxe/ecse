@@ -16,9 +16,10 @@
 
 .image {
   width: 384px;
+
   /* background: linear-gradient(to top left, red, blue); */
   transform: rotate(-7deg);
   background-color: #444;
-  border: 32px solid rgb(44, 255, 139);
+  border: 32px solid rgb(44 255 139);
   padding: 64px 32px 24px 8px;
 }

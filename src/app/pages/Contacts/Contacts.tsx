@@ -3,7 +3,7 @@ import React from 'react';
 function Contacts(): JSX.Element {
   return (
     <main className="is-center">
-      <div className="card">
+      <div className="card page">
         <header>
           <h1>Support</h1>
         </header>
@@ -20,7 +20,9 @@ function Contacts(): JSX.Element {
           <textarea />
         </label>
         <footer className="is-right">
-          <button className="button primary">Send</button>
+          <button className="button primary" disabled>
+            Send
+          </button>
         </footer>
       </div>
     </main>

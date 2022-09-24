@@ -1,3 +1,5 @@
+/* stylelint-disable */
+
 * {
   color: var(--font-color);
 }
@@ -17,6 +19,10 @@
   --font-color: #333333;
   --font-family-sans: sans-serif;
   --font-family-mono: monaco, 'Consolas', 'Lucida Console', monospace;
+}
+
+main {
+  overflow: hidden;
 }
 
 .is-transparent {
@@ -44,15 +50,69 @@ textarea {
 
 .card footer {
   margin-top: 24px;
-  padding-top: 24px;
-  border-top: 2px solid var(--color-darkGrey);
+  padding: 16px 0;
 }
 
 .card footer * {
   margin-left: 16px;
 }
 
+.card.page {
+  width: 40vw;
+}
+
 main .card.is-transparent {
-  transform: translateY(0px);
   padding: 32px;
+  /* width: 95%; */
+}
+
+.popup {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  width: 100%;
+}
+
+.popup img {
+  top: 50%;
+  left: 50%;
+  position: relative;
+  z-index: 11;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-darkGrey);
+  /* font-weight: 600; */
+  font-family: 'Pixel square';
 }
