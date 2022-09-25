@@ -12,6 +12,14 @@ const MESSAGES = {
 
 // insert into public.users (account, site_name, theme_id, nft_storage_key) values ();
 
+const isExistedName = (name: any): boolean => {
+  let isExisted = false;
+  if (fs.existsSync(`./sites/${name}`)) {
+    isExisted = true;
+  }
+  return isExisted;
+};
+
 const createHugo = (name: string) => {
   const defaultTheme = 'crochet';
   return [
@@ -39,14 +47,6 @@ router.post<{ name: string }>('/create', async (req, res) => {
     }
   });
 });
-
-const isExistedName = (name: string) => {
-  let isExisted = false;
-  if (fs.existsSync(`./sites/${name}`)) {
-    isExisted = true;
-  }
-  return isExisted;
-};
 
 router.post<{ name: string }>('/check-name', async (req, res) => {
   const isExisted = isExistedName(req.body.name);

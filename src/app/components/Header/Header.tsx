@@ -16,7 +16,7 @@ function Header() {
           </Link>
         </div>
         <div className={`col is-right ${styles.menu}`}>
-          <Link to={routes.getStarted}>Get started</Link>
+          <Link to={routes.getStarted}>Create</Link>
           <Link to={routes.about}>About</Link>
           <Link to={routes.contacts}>Contacts</Link>
           <Link to={routes.sigin}>

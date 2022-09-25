@@ -16,15 +16,15 @@ function CheckName(): JSX.Element {
               Build <span className={classes.selected}>your own shop</span>
             </h1>
             <p className={classes.message}>
-              We propose for you the best and safest solutions for free. You can
-              just click the button.
+              We propose for you the fast and scalable solutions for free. You
+              can just click the button.
             </p>
             <div>
               <button
                 onClick={() => history.push(routes.getStarted)}
                 className="button primary"
               >
-                Try
+                Get started
               </button>
               <button
                 onClick={() => history.push(routes.about)}
