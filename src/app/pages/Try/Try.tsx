@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import useFetch from 'use-http';
+import { useStore } from 'effector-react';
 import { useHistory } from 'react-router-dom';
 import { routes } from '../../consts';
 import Popup from '../../components/Popup/Popup';
+import { $active, setUserProfile } from '../../models/user';
 
 function Try(): JSX.Element {
-  const { active, account } = useWeb3React();
+  const { account } = useWeb3React();
+  const active = useStore($active);
   const history = useHistory();
   const [name, setName] = useState('');
   const { post, loading } = useFetch();
@@ -27,6 +30,7 @@ function Try(): JSX.Element {
     }
     const answer = await post('/api/create', { name, account });
     setMessage(answer.message);
+    setUserProfile(answer.data);
   }
 
   async function checkName() {
@@ -56,10 +60,7 @@ function Try(): JSX.Element {
         <option>Default theme</option>
       </select>
       <br />
-      <h4>3. NFT.storage</h4>
 
-      <input placeholder={'Enter your NFT.storage api key'} disabled />
-      <br />
       <code>
         ecse.io/{name}
         {message && ` - ${message}`}

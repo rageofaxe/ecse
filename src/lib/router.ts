@@ -1,57 +1,84 @@
 import express from 'express';
 import child_process from 'child_process';
-import fs from 'fs';
+import { User } from '../types';
+import { addUser, getUser, getUsers } from './db';
 
 const router = express.Router();
 
 const MESSAGES = {
-  ALREADY_EXISTED: 'This name already existed',
+  SUBDOMAIN_NAME_ALREADY_EXISTED: 'This name already existed',
+  SUBDOMAIN_ALREADY_EXISTED: 'Your site already existed',
   WAS_CREATED: 'was created',
   NAME_IS_FREE: 'You can use this name',
+  ANOTHER_ERROR: 'Unresolved mistake',
 };
 
-// insert into public.users (account, site_name, theme_id, nft_storage_key) values ();
-
-const isExistedName = (name: any): boolean => {
-  let isExisted = false;
-  if (fs.existsSync(`./sites/${name}`)) {
-    isExisted = true;
-  }
-  return isExisted;
+const isExistedSubdomain = async (subdomain: any) => {
+  const users = await getUsers();
+  return users.map((user) => user.subdomain).includes(subdomain);
 };
 
-const createHugo = (name: string) => {
-  const defaultTheme = 'crochet';
+const createHugo = (subdomain: string, theme = 'crochet') => {
   return [
-    `hugo new site sites/${name};`,
-    `cp themes/${defaultTheme}/ sites/${name}/themes/${defaultTheme} -r;`,
-    `cd sites/${name};`,
-    `hugo --theme ${defaultTheme};`,
-    `echo theme = "${defaultTheme}" >> config.toml`,
+    `hugo new site sites/${subdomain};`,
+    `cp themes/${theme}/ sites/${subdomain}/themes/${theme} -r;`,
+    `cd sites/${subdomain};`,
+    `hugo --theme ${theme};`,
+    `echo theme = "${theme}" >> config.toml`,
   ].join('');
 };
 
-router.post<{ name: string }>('/create', async (req, res) => {
-  const name = req.body.name;
+router.post('/connect', async (req, res) => {
   const account = req.body.account;
-  console.log(account);
-  const isExisted = isExistedName(name);
-  child_process.exec(createHugo(name), (err, _stout, sterr) => {
+  try {
+    await addUser({ account });
+    const user = await getUser(account);
+    res.status(200).json({ data: user });
+  } catch (error) {
+    res.status(200).json({ message: MESSAGES.ANOTHER_ERROR });
+  }
+});
+
+router.post('/create', async (req, res) => {
+  const subdomain = req.body.name;
+  const account = req.body.account;
+  const user: User = await getUser(account);
+  if (user?.subdomain) {
+    res.status(200).json({ message: MESSAGES.SUBDOMAIN_ALREADY_EXISTED });
+    return;
+  }
+
+  const isExisted = await isExistedSubdomain(req.body.name);
+  if (isExisted) {
+    res.status(200).json({ message: MESSAGES.SUBDOMAIN_NAME_ALREADY_EXISTED });
+  }
+
+  child_process.exec(createHugo(subdomain), async (err, _stout, sterr) => {
     if (err) {
-      console.log('error', sterr);
       res.status(200).json({ message: sterr });
-    } else if (isExisted) {
-      res.status(200).json({ message: MESSAGES.ALREADY_EXISTED });
     } else {
-      res.status(200).json({ message: MESSAGES.WAS_CREATED, _stout });
+      try {
+        await addUser({
+          account,
+          subdomain,
+        });
+        const user = await getUser(account);
+        res
+          .status(200)
+          .json({ message: MESSAGES.WAS_CREATED, _stout, data: user });
+      } catch (error) {
+        res.status(200).json({ message: MESSAGES.ANOTHER_ERROR });
+      }
     }
   });
 });
 
-router.post<{ name: string }>('/check-name', async (req, res) => {
-  const isExisted = isExistedName(req.body.name);
+router.post('/check-name', async (req, res) => {
+  const isExisted = await isExistedSubdomain(req.body.name);
   res.status(200).json({
-    message: isExisted ? MESSAGES.ALREADY_EXISTED : MESSAGES.NAME_IS_FREE,
+    message: isExisted
+      ? MESSAGES.SUBDOMAIN_NAME_ALREADY_EXISTED
+      : MESSAGES.NAME_IS_FREE,
   });
 });
 

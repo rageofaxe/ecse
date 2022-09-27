@@ -1,11 +1,14 @@
-import { useWeb3React } from '@web3-react/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useStore } from 'effector-react';
 import { routes } from '../../consts';
 import styles from './Header.module.css';
+import { $active, $userProfile } from '../../models/user';
 
 function Header() {
-  const { active } = useWeb3React();
+  const active = useStore($active);
+  const user = useStore($userProfile);
+
   return (
     <>
       <div className={`${styles.header} row is-full-width is-fixed`}>
@@ -16,7 +19,12 @@ function Header() {
           </Link>
         </div>
         <div className={`col is-right ${styles.menu}`}>
-          <Link to={routes.getStarted}>Create</Link>
+          {user?.subdomain ? (
+            <Link to={routes.getStarted}>Manage</Link>
+          ) : (
+            <Link to={routes.getStarted}>Create</Link>
+          )}
+
           <Link to={routes.about}>About</Link>
           <Link to={routes.contacts}>Contacts</Link>
           <Link to={routes.sigin}>

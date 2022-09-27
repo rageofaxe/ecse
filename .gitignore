@@ -8,3 +8,4 @@ dist-ssr
 .eslintcache
 grant.md
 src/nft
+db.json

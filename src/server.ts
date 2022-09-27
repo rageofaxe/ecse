@@ -1,4 +1,4 @@
-import express from 'express';
+import express from 'express/index.js';
 import router from './lib/router';
 import path from 'path';
 

@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Web3ReactProvider } from '@web3-react/core';
 import Web3 from 'web3';
 
+import './models/init';
+
 import CheckName from './pages/CheckName';
 import Try from './pages/Try';
 import Contacts from './pages/Contacts';
