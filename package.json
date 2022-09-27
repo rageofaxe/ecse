@@ -8,13 +8,14 @@
     "server:build": "tsc --project tsconfig.server.json",
     "client:build": "vite build",
     "storybook:build": "build-storybook -o dist/storybook",
-    "build": "npm run server:build && npm run client:build",
+    "build": "npm run server:build && npm run client:build && npm run creat:db",
     "extrabuild": "npm run server:build && npm run client:build && npm run storybook:build",
     "serve": "vite preview",
     "prepare": "husky install",
     "test": "tsc && prettier --check . && eslint . && stylelint \"**/*.css\"",
     "storybook": "start-storybook -p 6006",
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "creat:db": "touch db.json && echo {\"users\": {}, \"themes\":{}} >> db.json"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
