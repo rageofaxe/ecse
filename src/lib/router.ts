@@ -70,9 +70,8 @@ router.post('/user', async (req, res) => {
   });
 });
 
-// get /site
-router.post('/check-name', async (req, res) => {
-  const isExisted = await isExistedSubdomain(req.body.name);
+router.get('/site/:name', async (req, res) => {
+  const isExisted = await isExistedSubdomain(req.params.name);
   res.status(200).json({
     message: isExisted
       ? MESSAGES.SUBDOMAIN_NAME_ALREADY_EXISTED

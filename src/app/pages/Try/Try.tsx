@@ -12,7 +12,7 @@ function Try(): JSX.Element {
   const active = useStore($active);
   const history = useHistory();
   const [name, setName] = useState('');
-  const { post, loading } = useFetch();
+  const { get, post, loading } = useFetch();
   const [message, setMessage] = useState(null);
 
   // eslint-disable-next-line
@@ -34,7 +34,7 @@ function Try(): JSX.Element {
   }
 
   async function checkName() {
-    const answer = await post('/api/check-name', { name });
+    const answer = await get(`/api/site/${name}`);
     setMessage(answer.message);
   }
 
