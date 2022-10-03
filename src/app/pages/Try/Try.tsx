@@ -28,7 +28,7 @@ function Try(): JSX.Element {
       history.push(routes.sigin);
       return;
     }
-    const answer = await post('/api/create', { name, account });
+    const answer = await post('/api/user', { name, account });
     setMessage(answer.message);
     setUserProfile(answer.data);
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { InjectedConnector } from '@web3-react/injected-connector';
+import Web3 from 'web3';
 import useFetch from 'use-http';
 import { $active, setUserProfile } from '../../models/user';
 import { useStore } from 'effector-react';
@@ -9,17 +10,27 @@ import { useEffect } from 'react';
 const injected = new InjectedConnector({
   supportedChainIds: [1],
 });
+const web3 = new Web3(Web3.givenProvider);
 
 function AuthWeb3() {
   const activeUser = useStore($active);
   const { active, activate, deactivate, account } = useWeb3React();
-  const { post } = useFetch();
+  const { get } = useFetch();
 
   useEffect(() => {
     (async function () {
       if (active && !activeUser) {
-        const result = await post('/api/connect', { account });
-        setUserProfile(result.data);
+        const challenge = await get(`/api/auth/${account}`);
+        const signedChallenge = await web3.eth.personal.sign(
+          challenge[1].value,
+          account as string,
+          ''
+        );
+
+        const user = await get(
+          `/api/auth/${challenge[1].value}/${signedChallenge}`
+        );
+        setUserProfile(user);
       }
     })();
   }, [active]);
