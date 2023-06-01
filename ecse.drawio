@@ -1,0 +1,48 @@
+<mxfile host="app.diagrams.net" modified="2023-06-01T11:25:06.447Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="H3tPeBfWRuo5Haoq5Swt" version="21.3.6" type="github">
+  <diagram name="Page-1" id="lIMUi4MzQIsj5MkFIn0c">
+    <mxGraphModel dx="1360" dy="811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PG5AYGfkKpYn8-KnW0RV-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="PG5AYGfkKpYn8-KnW0RV-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="295" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PG5AYGfkKpYn8-KnW0RV-2" value="Static Catalog" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="242" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PG5AYGfkKpYn8-KnW0RV-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PG5AYGfkKpYn8-KnW0RV-3" target="PG5AYGfkKpYn8-KnW0RV-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PG5AYGfkKpYn8-KnW0RV-3" value="Dynamic cart (Client side with javascript)" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PG5AYGfkKpYn8-KnW0RV-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="PG5AYGfkKpYn8-KnW0RV-5" target="PG5AYGfkKpYn8-KnW0RV-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PG5AYGfkKpYn8-KnW0RV-5" value="Order (NFT, that stored order&#39;s info)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PG5AYGfkKpYn8-KnW0RV-9" value="&lt;h1&gt;Customer flow&lt;/h1&gt;&lt;p&gt;1. Customer picks goods and adds ones to cart&lt;br&gt;&lt;/p&gt;&lt;p&gt;2. After order confirmation customer create NFT with order&#39;s info&lt;/p&gt;&lt;p&gt;3. Customer make extra pay for NFT&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="10" width="190" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="PG5AYGfkKpYn8-KnW0RV-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="PG5AYGfkKpYn8-KnW0RV-5" target="PG5AYGfkKpYn8-KnW0RV-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PG5AYGfkKpYn8-KnW0RV-11" value="&lt;h1&gt;Owner flow&lt;/h1&gt;&lt;p&gt;4. Owner buys out NFT and collects their for accounting&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="10" width="210" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="PG5AYGfkKpYn8-KnW0RV-12" value="Buy out NFT" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="PG5AYGfkKpYn8-KnW0RV-14" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="1100" as="sourcePoint" />
+            <mxPoint x="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
