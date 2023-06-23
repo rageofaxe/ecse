@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-16T12:24:08.162Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="bQSQev9cnCDIoa26m4c5" version="21.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-23T15:14:15.963Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="id9Lulp4gZNS2Lvq_Pm4" version="21.5.0" type="github">
   <diagram name="Page-1" id="lsT4wqbdhYgyk3f3oKFe">
     <mxGraphModel dx="1360" dy="811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -28,7 +28,7 @@
         <mxCell id="rJqO0jKTIe9qJqitLwrk-7" value="Email" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="520" y="490" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="rRubbl5kEB2REaTL_Rky-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rJqO0jKTIe9qJqitLwrk-9" target="rJqO0jKTIe9qJqitLwrk-26">
+        <mxCell id="rRubbl5kEB2REaTL_Rky-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="rJqO0jKTIe9qJqitLwrk-9" target="rJqO0jKTIe9qJqitLwrk-26" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="rJqO0jKTIe9qJqitLwrk-9" value="Services" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
@@ -58,13 +58,13 @@
         <mxCell id="rJqO0jKTIe9qJqitLwrk-18" value="Smartphone" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="200" y="60" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rRubbl5kEB2REaTL_Rky-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="rJqO0jKTIe9qJqitLwrk-20" target="rJqO0jKTIe9qJqitLwrk-2">
+        <mxCell id="rRubbl5kEB2REaTL_Rky-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="rJqO0jKTIe9qJqitLwrk-20" target="rJqO0jKTIe9qJqitLwrk-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="rJqO0jKTIe9qJqitLwrk-20" value="Headless Browser" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="360" y="160" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="rJqO0jKTIe9qJqitLwrk-22" value="PGP" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;perimeterSpacing=1;fontStyle=1" parent="1" vertex="1">
+        <mxCell id="rJqO0jKTIe9qJqitLwrk-22" value="RSA" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;perimeterSpacing=1;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="520" y="650" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="rJqO0jKTIe9qJqitLwrk-26" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;sketch=1;curveFitting=1;jiggle=2;opacity=80;gradientColor=none;" parent="1" vertex="1">
@@ -76,8 +76,11 @@
         <mxCell id="rJqO0jKTIe9qJqitLwrk-28" value="&lt;h1&gt;Hardware&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Raspberry?&lt;/li&gt;&lt;li&gt;PowerBang?&lt;/li&gt;&lt;li&gt;Smartphone&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="360" y="40" width="190" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="rRubbl5kEB2REaTL_Rky-7" value="&lt;h1&gt;Software&lt;/h1&gt;&lt;div&gt;1. Email&lt;/div&gt;&lt;div&gt;2. Instagram&lt;/div&gt;&lt;div&gt;3. JSBin&lt;/div&gt;&lt;div&gt;4. PGP&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="rRubbl5kEB2REaTL_Rky-7" value="&lt;h1&gt;Software&lt;/h1&gt;&lt;div&gt;1. Email&lt;/div&gt;&lt;div&gt;2. Instagram&lt;/div&gt;&lt;div&gt;3. JSBin&lt;/div&gt;&lt;div&gt;4. RSA&lt;/div&gt;&lt;div&gt;5. Wallet&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="280" y="480" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="VpifUKIUipkE6gYy_xPz-1" value="Wallet" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;perimeterSpacing=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="680" y="650" width="120" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
